@@ -5,6 +5,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     private List<string> collectedItems = new List<string>();
+    public string currentItem;
 
     void Awake()
     {
@@ -25,5 +26,15 @@ public class InventoryManager : MonoBehaviour
     public bool HasItem(string itemName)
     {
         return collectedItems.Contains(itemName);
+    }
+
+    public void ChangeItem(string itemName)
+    {
+        if (collectedItems.Contains(itemName))
+        {
+            currentItem = itemName;
+        }
+
+        Debug.Log($"Now holding: {currentItem}");
     }
 }
