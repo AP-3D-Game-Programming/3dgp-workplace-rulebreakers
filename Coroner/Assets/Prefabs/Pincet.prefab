@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpItem
   itemName: Pincet
+  pickupText: {fileID: 0}
+  messageDuration: 2
+  pickupSound: {fileID: 8300000, guid: 4c2e6ff9caf865440a26e5624a258e66, type: 3}
+  soundVolume: 0.8
 --- !u!65 &7483075307221946515
 BoxCollider:
   m_ObjectHideFlags: 0

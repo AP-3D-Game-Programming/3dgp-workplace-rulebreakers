@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpItem
   itemName: Schaar
+  pickupText: {fileID: 0}
+  messageDuration: 2
+  pickupSound: {fileID: 8300000, guid: 4c2e6ff9caf865440a26e5624a258e66, type: 3}
+  soundVolume: 0.8
 --- !u!65 &3275404627838551685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116,5 +120,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08, y: -0.02, z: 0.21}
+  m_Size: {x: 0.08, y: 0.02, z: 0.21}
   m_Center: {x: 0, y: 0, z: -0.02}

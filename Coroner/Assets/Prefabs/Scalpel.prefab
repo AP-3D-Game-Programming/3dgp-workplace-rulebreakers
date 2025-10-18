@@ -96,6 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fa81d42a86dce409be09f18e84f703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpItem
+  itemName: Scalpel
+  pickupText: {fileID: 0}
+  messageDuration: 2
+  pickupSound: {fileID: 8300000, guid: 4c2e6ff9caf865440a26e5624a258e66, type: 3}
+  soundVolume: 0.8
 --- !u!65 &8917846474418467773
 BoxCollider:
   m_ObjectHideFlags: 0
