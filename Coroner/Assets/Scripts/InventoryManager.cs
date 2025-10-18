@@ -5,6 +5,8 @@ using TMPro;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
+    private List<string> collectedItems = new List<string>();
+    public string currentItem;
 
     [Header("UI")]
     public Transform inventoryPanel;      
@@ -56,5 +58,15 @@ public class InventoryManager : MonoBehaviour
             if (view != null)
                 view.Bind(item);
         }
+    }
+
+    public void ChangeItem(string itemName)
+    {
+        if (collectedItems.Contains(itemName))
+        {
+            currentItem = itemName;
+        }
+
+        Debug.Log($"Now holding: {currentItem}");
     }
 }

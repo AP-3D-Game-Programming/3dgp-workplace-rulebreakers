@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ExamineBodyPart : MonoBehaviour
 {
+    InventoryManager inventory;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +16,15 @@ public class ExamineBodyPart : MonoBehaviour
 
     private void OnMouseUp()
     {
-        Debug.Log(gameObject.name + " was clicked");
+        GameObject currentInstrument = GameObject.Find(inventory.currentItem);
+
+        if (CompareTag(currentInstrument.tag))
+        {
+            Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tag '{tag}'.");
+        }
+        else
+        {
+            Debug.LogError("Wrong tag, try another one!");
+        }
     }
 }

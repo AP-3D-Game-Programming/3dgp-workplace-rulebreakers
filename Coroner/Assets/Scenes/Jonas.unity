@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nieren
       objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineTorso
+      objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.135
@@ -193,6 +197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neus
       objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineFace
+      objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -254,6 +262,10 @@ PrefabInstance:
     - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_Name
       value: Brein
+      objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineBrain
       objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalScale.x
@@ -330,7 +342,7 @@ GameObject:
   - component: {fileID: 969818697}
   m_Layer: 0
   m_Name: Ogen
-  m_TagString: Untagged
+  m_TagString: ExamineFace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,6 +408,10 @@ PrefabInstance:
     - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_Name
       value: Longen
+      objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineTorso
       objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -585,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hart
       objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineTorso
+      objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.099
@@ -773,6 +793,10 @@ PrefabInstance:
     - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_Name
       value: Voet
+      objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineLimbs
       objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -973,6 +997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 413511107604969365, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
+      propertyPath: m_TagString
+      value: ExamineLimbs
+      objectReference: {fileID: 0}
     - target: {fileID: 4063192394348077099, guid: 99065cd52e17a4142a42a0e3dfe6920f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.616
@@ -1034,6 +1062,10 @@ PrefabInstance:
     - target: {fileID: 1920782025978739488, guid: 8e74ec9fbb95b024ab9dc42192e36d0b, type: 3}
       propertyPath: m_Name
       value: Mond
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920782025978739488, guid: 8e74ec9fbb95b024ab9dc42192e36d0b, type: 3}
+      propertyPath: m_TagString
+      value: ExamineFace
       objectReference: {fileID: 0}
     - target: {fileID: 3471029517321890054, guid: 8e74ec9fbb95b024ab9dc42192e36d0b, type: 3}
       propertyPath: m_LocalPosition.x
