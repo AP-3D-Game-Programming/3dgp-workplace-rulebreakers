@@ -8,7 +8,7 @@ public class InventoryItemView : MonoBehaviour
     public Image icon;
     public TextMeshProUGUI label;
 
-   
+
     public void Bind(string itemName, Sprite itemIcon = null)
     {
         if (label != null)

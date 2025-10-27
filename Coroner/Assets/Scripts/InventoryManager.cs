@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -9,8 +9,8 @@ public class InventoryManager : MonoBehaviour
     public string currentItem;
 
     [Header("UI")]
-    public Transform inventoryPanel;      
-    public GameObject inventoryItemPrefab; 
+    public Transform inventoryPanel;
+    public GameObject inventoryItemPrefab;
 
     private List<string> items = new List<string>();
 
@@ -46,11 +46,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (inventoryPanel == null || inventoryItemPrefab == null) return;
 
-        
+
         foreach (Transform child in inventoryPanel)
             Destroy(child.gameObject);
 
-        
+
         foreach (string item in items)
         {
             GameObject entry = Instantiate(inventoryItemPrefab, inventoryPanel);

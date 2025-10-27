@@ -78,9 +78,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d90cac4e3317b9548b91358fd78a0a88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1068486850324964708}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d90cac4e3317b9548b91358fd78a0a88, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1501866709933001525}
   m_SourcePrefab: {fileID: 100100000, guid: d90cac4e3317b9548b91358fd78a0a88, type: 3}
 --- !u!1 &7135981079346881635 stripped
@@ -88,23 +85,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d90cac4e3317b9548b91358fd78a0a88, type: 3}
   m_PrefabInstance: {fileID: 8055093834443135282}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1068486850324964708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7135981079346881635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35fa81d42a86dce409be09f18e84f703, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickUpItem
-  itemName: Tang
-  pickupText: {fileID: 0}
-  messageDuration: 2
-  pickupSound: {fileID: 8300000, guid: 4c2e6ff9caf865440a26e5624a258e66, type: 3}
-  soundVolume: 0.8
 --- !u!65 &1501866709933001525
 BoxCollider:
   m_ObjectHideFlags: 0
