@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ExamineFace
-  - ExamineLimbs
-  - ExamineTorso
-  - ExamineBrain
+  - BodyPart
   layers:
   - Default
   - TransparentFX
