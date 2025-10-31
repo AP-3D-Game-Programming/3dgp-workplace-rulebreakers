@@ -4,10 +4,17 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ExamineFace
-  - ExamineLimbs
-  - ExamineTorso
-  - ExamineBrain
+  - Brein
+  - Ogen
+  - Neus
+  - Mond
+  - Oor
+  - Hand
+  - Long
+  - Hart
+  - Nier
+  - Darmen
+  - Voet
   layers:
   - Default
   - TransparentFX
