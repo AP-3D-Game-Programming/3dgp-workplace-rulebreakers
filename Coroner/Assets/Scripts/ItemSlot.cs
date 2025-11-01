@@ -27,9 +27,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public ItemType itemType;
 
+    [SerializeField]
+    private PickUpSlot pickUpSlot;
+
     private void Start()
     {
-        inventoryManager = GameObject.Find("InventoryPopUp").GetComponent<InventoryManagerNew>();
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManagerNew>();
     }
 
 
@@ -61,9 +64,23 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         if (thisItemSelected)
         {
-            inventoryManager.UseItem(itemName);
+            if (itemType == ItemType.tool && pickUpSlot != null)
+            {
+                pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription);
+                Debug.Log("Item opgepakt: " + itemName);
+            }
+
+            else if (itemType == ItemType.hint)
+            {
+                inventoryManager.UseItem(itemName);
+            }
         }
-        inventoryManager.DeselectAllSlots();
+        else
+        {
+            inventoryManager.DeselectAllSlots();
+        }
+            
+        
         selectedShader.SetActive(true);
         thisItemSelected = true;
 
@@ -74,6 +91,14 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         if (ItemDescriptionImage.sprite == null)
         {
             ItemDescriptionImage.sprite = emptySprite;
+        }
+    }
+
+    private void PickUpTool()
+    {
+        if(itemType == ItemType.tool)
+        {
+            pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription);
         }
     }
 

@@ -29,7 +29,7 @@ public class HintSlot : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        inventoryManager = GameObject.Find("InventoryPopUp").GetComponent<InventoryManagerNew>();
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManagerNew>();
     }
 
 
@@ -65,6 +65,7 @@ public class HintSlot : MonoBehaviour, IPointerClickHandler
         }
         inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
+        Debug.Log("SelectedShader points to: " + selectedShader.name);
         thisItemSelected = true;
 
         ItemDescriptionNameText.text = itemName;

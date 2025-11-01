@@ -63,7 +63,7 @@ public class Item : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryPopUp").GetComponent<InventoryManagerNew>();
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManagerNew>();
 
         if (pickupText == null)
             pickupText = GameObject.Find("PickUpMessage")?.GetComponent<TextMeshProUGUI>();

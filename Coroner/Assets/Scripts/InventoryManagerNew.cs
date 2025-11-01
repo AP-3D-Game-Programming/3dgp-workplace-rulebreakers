@@ -88,6 +88,12 @@ public class InventoryManagerNew : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
 
+        for (int i = 0; i < hintSlot.Length; i++)
+        {
+            hintSlot[i].selectedShader.SetActive(false);
+            hintSlot[i].thisItemSelected = false;
+        }
+
     }
 }
 
