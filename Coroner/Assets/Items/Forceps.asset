@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Forceps
   m_EditorClassIdentifier: Assembly-CSharp::ScriptObjItem
   itemName: forceps
-  itemToChange: 1
+  itemToChange: 3

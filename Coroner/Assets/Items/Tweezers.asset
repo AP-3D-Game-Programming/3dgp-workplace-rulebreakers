@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tweezers
   m_EditorClassIdentifier: Assembly-CSharp::ScriptObjItem
   itemName: tweezers
-  itemToChange: 1
+  itemToChange: 0

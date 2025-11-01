@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerClickHandler
+public class HintSlot : MonoBehaviour, IPointerClickHandler
 {
     public string itemName;
     public Sprite inventoryIcon;

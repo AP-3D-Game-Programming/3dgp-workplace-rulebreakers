@@ -8,11 +8,11 @@ public class ScriptObjItem : ScriptableObject
 
     public void UseItem()
     {
-        if (itemToChange == ItemToChange.bodypart)
+        if (itemToChange == ItemToChange.face)
         {
             
         }
-        if (itemToChange == ItemToChange.otherItem)
+        if (itemToChange == ItemToChange.brain)
         {
 
         }
@@ -20,8 +20,9 @@ public class ScriptObjItem : ScriptableObject
 
     public enum ItemToChange
     {
-        none,
-        bodypart,
-        otherItem
+        face,
+        brain,
+        limb,
+        torso
     };
 }

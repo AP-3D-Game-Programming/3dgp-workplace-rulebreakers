@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -28,17 +29,35 @@ public class Item : MonoBehaviour
     [SerializeField]
     private string itemDescription;
 
+    [SerializeField]
+    private bool isClickable = false;
+
+    public ItemType itemType;
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!isClickable && other.CompareTag("Player"))
         {
-            InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription);
+            InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
             PlayPickupSound();
             ShowPickupMessage("You found " + itemName + "!\nItem is added to your inventory!");
             Debug.Log("Item opgepikt: " + itemName);
             Destroy(gameObject);
         }
+    }
+
+    private void OnMouseUp()
+    {
+        if (isClickable)
+        {
+            Debug.Log($"clicked poster with tag '{tag}'");
+            InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
+            PlayPickupSound();
+            ShowPickupMessage("You foud a hint about the " + itemName + "!\nHint added to your inventory!");
+            Destroy(gameObject);
+        }
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

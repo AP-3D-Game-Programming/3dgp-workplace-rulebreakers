@@ -7,6 +7,7 @@ public class InventoryManagerNew : MonoBehaviour
     private bool menuActivated;
     public static InventoryManagerNew Instance;
     public ItemSlot[] itemSlot;
+    public HintSlot[] hintSlot;
     public ScriptObjItem[] scriptObjItems;
 
     private void Awake()
@@ -51,15 +52,30 @@ public class InventoryManagerNew : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, Sprite inventoryIcon, string itemDescription)
+    public void AddItem(string itemName, Sprite inventoryIcon, string itemDescription, ItemType itemType)
     {
-        Debug.Log("ItemName = " + itemName + " - itemSprite = " + inventoryIcon);
-        for (int i = 0; i < itemSlot.Length; i++)
+        if (itemType == ItemType.tool)
         {
-            if (itemSlot[i].isFull == false)
+            Debug.Log("Tool = " + itemName);
+            for (int i = 0; i < itemSlot.Length; i++)
             {
-                itemSlot[i].AddItem(itemName, inventoryIcon, itemDescription);
-                return;
+                if (itemSlot[i].isFull == false)
+                {
+                    itemSlot[i].AddItem(itemName, inventoryIcon, itemDescription, itemType);
+                    return;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Hint = " + itemName);
+            for (int i = 0; i < hintSlot.Length; i++)
+            {
+                if (hintSlot[i].isFull == false)
+                {
+                    hintSlot[i].AddItem(itemName, inventoryIcon, itemDescription, itemType);
+                    return;
+                }
             }
         }
     }
@@ -74,3 +90,9 @@ public class InventoryManagerNew : MonoBehaviour
 
     }
 }
+
+public enum ItemType
+{
+    hint,
+    tool
+};

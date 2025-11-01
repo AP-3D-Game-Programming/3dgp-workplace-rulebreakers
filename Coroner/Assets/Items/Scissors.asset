@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Scissors
   m_EditorClassIdentifier: Assembly-CSharp::ScriptObjItem
   itemName: a pair of scissors
-  itemToChange: 1
+  itemToChange: 2
