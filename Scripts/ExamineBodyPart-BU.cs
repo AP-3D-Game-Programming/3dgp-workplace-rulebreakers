@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class ExamineBodyPart : MonoBehaviour
@@ -7,8 +8,11 @@ public class ExamineBodyPart : MonoBehaviour
     [Tooltip("Tag van het juiste instrument (bijv. 'Pincet' of 'Scalpel')")]
     public string requiredToolTag;
 
-    public GameObject successPrefab;
-    public GameObject failPrefab;
+    [SerializeField] 
+    private ParticleSystem successEffect;
+    
+    [SerializeField] 
+    private ParticleSystem failEffect;
 
     void Start()
     {
@@ -27,19 +31,25 @@ public class ExamineBodyPart : MonoBehaviour
 
         Debug.Log($"[ExamineBodyPart] Current tool: {currentToolName}, required: {requiredToolTag}");
 
-       
+
         if (currentToolName == requiredToolTag)
         {
-            Instantiate(successPrefab, transform.position, transform.rotation, transform);
             Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tool '{currentToolName}'.");
 
-            
+            if (successPrefab != null)
+                Instantiate(successPrefab, transform.position, Quaternion.identity);
+                Debug.Log("Sparkle prefab instantiated!");
+
             inventory.ConsumeCurrentTool();
         }
         else
         {
-            Instantiate(failPrefab, transform.position, Quaternion.identity);
             Debug.LogError($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
+
+            if (failPrefab != null)
+                Instantiate(failPrefab, transform.position, Quaternion.identity);
+                Debug.Log("Sparkle prefab instantiated!");
         }
+
     }
 }

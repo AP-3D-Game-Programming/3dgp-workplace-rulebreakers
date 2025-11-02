@@ -30,16 +30,21 @@ public class ExamineBodyPart : MonoBehaviour
 
         if (currentToolName == requiredToolTag)
         {
-            Instantiate(successPrefab, transform.position, transform.rotation, transform);
             Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tool '{currentToolName}'.");
 
+            if (successPrefab != null)
+                Instantiate(successPrefab, transform.position, Quaternion.identity);
+                Debug.Log("Sparkle prefab instantiated!");
 
             inventory.ConsumeCurrentTool();
         }
         else
         {
-            Instantiate(failPrefab, transform.position, Quaternion.identity);
             Debug.LogError($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
+
+            if (failPrefab != null)
+                Instantiate(failPrefab, transform.position, Quaternion.identity);
         }
+
     }
 }

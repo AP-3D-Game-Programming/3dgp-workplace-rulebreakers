@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.02745098, g: 0, b: 0.11372549, a: 0.98039216}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -171,7 +171,7 @@ MonoBehaviour:
   itemImage: {fileID: 9018072826210678111}
   selectedShader: {fileID: 3190720721567564267}
   thisItemSelected: 0
-  ItemDescriptionImage: {fileID: 0}
+  ItemDescriptionImage: {fileID: 9018072826210678111}
   ItemDescriptionNameText: {fileID: 0}
   ItemDescriptionText: {fileID: 0}
   itemDescription: 
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 0.5882353}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
