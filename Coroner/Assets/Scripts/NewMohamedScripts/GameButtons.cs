@@ -16,7 +16,7 @@ public class GameButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.inputString.ToLower() == "m")
         {
             mouseMovement.locked = !mouseMovement.locked;
             Cursor.lockState = mouseMovement.locked ? CursorLockMode.Locked : CursorLockMode.None;
