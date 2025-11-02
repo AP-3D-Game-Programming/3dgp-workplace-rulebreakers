@@ -66,7 +66,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             if (itemType == ItemType.tool && pickUpSlot != null)
             {
-                pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription);
+                PickUpTool();
                 Debug.Log("Item opgepakt: " + itemName);
             }
 
@@ -98,8 +98,15 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         if(itemType == ItemType.tool)
         {
-            pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription);
+            pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription, this);
         }
+        EmptySlot();
+    }
+
+    private void EmptySlot()
+    {
+        itemImage.sprite = emptySprite;
+        isFull = false;
     }
 
     public void OnRightClick()

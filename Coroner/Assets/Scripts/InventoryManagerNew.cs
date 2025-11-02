@@ -1,5 +1,11 @@
 using UnityEngine;
 
+[System.Serializable]
+public class ToolEntry
+{
+    public string itemName;
+    public GameObject toolPrefab;
+}
 
 public class InventoryManagerNew : MonoBehaviour
 {
@@ -9,6 +15,14 @@ public class InventoryManagerNew : MonoBehaviour
     public ItemSlot[] itemSlot;
     public HintSlot[] hintSlot;
     public ScriptObjItem[] scriptObjItems;
+
+    [SerializeField]
+    private ToolDisplayManager toolDisplayManager;
+
+    [SerializeField]
+    private PickUpSlot pickUpSlot;
+
+    public ToolEntry[] toolPrefabs;
 
     private void Awake()
     {
@@ -37,6 +51,18 @@ public class InventoryManagerNew : MonoBehaviour
             menuActivated = !menuActivated;
             InventoryMenu.SetActive(menuActivated);
             Time.timeScale = menuActivated ? 0 : 1;
+
+            if (menuActivated)
+            {
+                if (pickUpSlot.IsSlotInUse())
+                {
+                    toolDisplayManager.ShowTool(pickUpSlot.GetToolPrefab());
+                }
+            }
+            else
+            {
+                toolDisplayManager.HideTool();
+            }
         }
     }
 
@@ -94,6 +120,28 @@ public class InventoryManagerNew : MonoBehaviour
             hintSlot[i].thisItemSelected = false;
         }
 
+    }
+
+    public ItemSlot FindEmptySlot()
+    {
+        foreach (ItemSlot slot in itemSlot)
+        {
+            if (!slot.isFull)
+            {
+                return slot;
+            }
+        }
+        return null;
+    }
+
+    public GameObject GetPrefabForItem(string itemName)
+    {
+        foreach (ToolEntry entry in toolPrefabs)
+        {
+            if (entry.itemName == itemName)
+                return entry.toolPrefab;
+        }
+        return null;
     }
 }
 
