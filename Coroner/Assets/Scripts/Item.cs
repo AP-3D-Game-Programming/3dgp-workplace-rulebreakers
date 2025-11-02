@@ -35,17 +35,17 @@ public class Item : MonoBehaviour
     public ItemType itemType;
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!isClickable && other.CompareTag("Player"))
-        {
-            InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
-            PlayPickupSound();
-            ShowPickupMessage("You found " + itemName + "!\nItem is added to your inventory!");
-            Debug.Log("Item opgepikt: " + itemName);
-            Destroy(gameObject);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (!isClickable && other.CompareTag("Player"))
+    //    {
+    //        InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
+    //        PlayPickupSound();
+    //        ShowPickupMessage("You found " + itemName + "!\nItem is added to your inventory!");
+    //        Debug.Log("Item opgepikt: " + itemName);
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     private void OnMouseUp()
     {
@@ -73,10 +73,30 @@ public class Item : MonoBehaviour
     }
 
     // Update is called once per frame
+    // ----- door Mohamed ----- //
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0)) // linkermuisklik
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+            {
+                if (hit.collider == GetComponent<Collider>())
+                {
+                    PickiUpItem();
+                }
+            }
+        }
     }
+    void PickiUpItem()
+    {
+        ShowPickupMessage("Je hebt een " + itemName + " gevonden!");
+        ShowPickupMessage(itemName + " toegevoegd aan de inventaris!");
+        PlayPickupSound();
+        InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
+        gameObject.SetActive(false);
+    }
+    // ---------------------- //
 
     void PlayPickupSound()
     {
