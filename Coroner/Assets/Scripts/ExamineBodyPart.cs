@@ -15,7 +15,7 @@ public class ExamineBodyPart : MonoBehaviour
         inventory = InventoryManagerNew.Instance;
     }
 
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
         string currentToolName = inventory.GetCurrentToolName();
 
