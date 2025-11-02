@@ -1,12 +1,5 @@
 using UnityEngine;
 
-[System.Serializable]
-public class ToolEntry
-{
-    public string itemName;
-    public GameObject toolPrefab;
-}
-
 public class InventoryManagerNew : MonoBehaviour
 {
     public GameObject InventoryMenu;
@@ -22,7 +15,8 @@ public class InventoryManagerNew : MonoBehaviour
     [SerializeField]
     private PickUpSlot pickUpSlot;
 
-    public ToolEntry[] toolPrefabs;
+    [SerializeField]
+    private ToolDatabase toolDatabase;
 
     private void Awake()
     {
@@ -34,12 +28,6 @@ public class InventoryManagerNew : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -61,7 +49,17 @@ public class InventoryManagerNew : MonoBehaviour
             }
             else
             {
-                toolDisplayManager.HideTool();
+                Debug.Log("[InventoryManagerNew] Inventory wordt gesloten");
+                if (pickUpSlot.IsSlotInUse())
+                {
+                    GameObject prefab = pickUpSlot.GetToolPrefab();
+                    Debug.Log($"[InventoryManagerNew] Prefab bij sluiten inventory: {prefab}");
+                    toolDisplayManager.ShowTool(prefab);
+                }
+                else
+                {
+                    Debug.Log("[InventoryManagerNew] Geen item in gebruik bij sluiten inventory");
+                }
             }
         }
     }
@@ -136,13 +134,14 @@ public class InventoryManagerNew : MonoBehaviour
 
     public GameObject GetPrefabForItem(string itemName)
     {
-        foreach (ToolEntry entry in toolPrefabs)
+        if (toolDatabase == null)
         {
-            if (entry.itemName == itemName)
-                return entry.toolPrefab;
+            Debug.LogError("[InventoryManagerNew] ToolDatabase is niet gezet.");
+            return null;
         }
-        return null;
+        return toolDatabase.GetPrefabForItem(itemName);
     }
+
 }
 
 public enum ItemType

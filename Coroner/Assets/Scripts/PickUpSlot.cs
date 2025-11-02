@@ -33,9 +33,6 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
     private ToolDisplayManager toolDisplayManager;
 
     [SerializeField]
-    private GameObject toolPrefab;
-
-    [SerializeField]
     private InventoryManagerNew inventoryManager;
 
     public void OnPointerClick(PointerEventData eventData)
@@ -116,6 +113,8 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
         slotInUse = true;
         selectedShader.SetActive(true);
         thisItemSelected = true;
+
+        Debug.Log($"[PickUpSlot] Picked up tool: {itemName}");
     }
 
     public bool IsSlotInUse()
@@ -125,7 +124,14 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
 
     public GameObject GetToolPrefab()
     {
-        return toolPrefab;
+        if (inventoryManager == null)
+        {
+            Debug.LogError("[PickUpSlot] InventoryManager is niet ingesteld!");
+            return null;
+        }
+
+        Debug.Log($"[PickUpSlot] Opvragen prefab voor item: {itemName}");
+        return inventoryManager.GetPrefabForItem(itemName);
     }
 
     public void ConsumeTool()
