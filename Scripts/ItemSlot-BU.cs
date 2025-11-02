@@ -68,38 +68,31 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             {
                 PickUpTool();
                 Debug.Log("Item opgepakt: " + itemName);
-
-               
-                if (ItemDescriptionNameText != null) ItemDescriptionNameText.text = "";
-                if (ItemDescriptionText != null) ItemDescriptionText.text = "";
             }
+
             else if (itemType == ItemType.hint)
             {
                 inventoryManager.UseItem(itemName);
-
-                
-                if (ItemDescriptionNameText != null)
-                    ItemDescriptionNameText.text = itemName;
-
-                if (ItemDescriptionText != null)
-                    ItemDescriptionText.text = itemDescription;
             }
         }
         else
         {
             inventoryManager.DeselectAllSlots();
         }
-
+            
+        
         selectedShader.SetActive(true);
         thisItemSelected = true;
 
-       
-        if (ItemDescriptionImage != null)
+        ItemDescriptionNameText.text = itemName;
+        ItemDescriptionText.text = itemDescription;
+        ItemDescriptionImage.sprite = inventoryIcon;
+
+        if (ItemDescriptionImage.sprite == null)
         {
-            ItemDescriptionImage.sprite = inventoryIcon != null ? inventoryIcon : emptySprite;
+            ItemDescriptionImage.sprite = emptySprite;
         }
     }
-
 
     private void PickUpTool()
     {

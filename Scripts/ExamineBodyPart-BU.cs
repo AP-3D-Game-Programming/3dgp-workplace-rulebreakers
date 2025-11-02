@@ -27,13 +27,13 @@ public class ExamineBodyPart : MonoBehaviour
 
         Debug.Log($"[ExamineBodyPart] Current tool: {currentToolName}, required: {requiredToolTag}");
 
-
+       
         if (currentToolName == requiredToolTag)
         {
             Instantiate(successPrefab, transform.position, transform.rotation, transform);
             Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tool '{currentToolName}'.");
 
-
+            
             inventory.ConsumeCurrentTool();
         }
         else

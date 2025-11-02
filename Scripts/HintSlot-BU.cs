@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerClickHandler
+public class HintSlot : MonoBehaviour, IPointerClickHandler
 {
     public string itemName;
     public Sprite inventoryIcon;
@@ -26,9 +26,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public Sprite emptySprite;
 
     public ItemType itemType;
-
-    [SerializeField]
-    private PickUpSlot pickUpSlot;
 
     private void Start()
     {
@@ -64,56 +61,21 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         if (thisItemSelected)
         {
-            if (itemType == ItemType.tool && pickUpSlot != null)
-            {
-                PickUpTool();
-                Debug.Log("Item opgepakt: " + itemName);
-
-               
-                if (ItemDescriptionNameText != null) ItemDescriptionNameText.text = "";
-                if (ItemDescriptionText != null) ItemDescriptionText.text = "";
-            }
-            else if (itemType == ItemType.hint)
-            {
-                inventoryManager.UseItem(itemName);
-
-                
-                if (ItemDescriptionNameText != null)
-                    ItemDescriptionNameText.text = itemName;
-
-                if (ItemDescriptionText != null)
-                    ItemDescriptionText.text = itemDescription;
-            }
+            inventoryManager.UseItem(itemName);
         }
-        else
-        {
-            inventoryManager.DeselectAllSlots();
-        }
-
+        inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
+        Debug.Log("SelectedShader points to: " + selectedShader.name);
         thisItemSelected = true;
 
-       
-        if (ItemDescriptionImage != null)
+        ItemDescriptionNameText.text = itemName;
+        ItemDescriptionText.text = itemDescription;
+        ItemDescriptionImage.sprite = inventoryIcon;
+
+        if (ItemDescriptionImage.sprite == null)
         {
-            ItemDescriptionImage.sprite = inventoryIcon != null ? inventoryIcon : emptySprite;
+            ItemDescriptionImage.sprite = emptySprite;
         }
-    }
-
-
-    private void PickUpTool()
-    {
-        if(itemType == ItemType.tool)
-        {
-            pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription, this);
-        }
-        EmptySlot();
-    }
-
-    private void EmptySlot()
-    {
-        itemImage.sprite = emptySprite;
-        isFull = false;
     }
 
     public void OnRightClick()

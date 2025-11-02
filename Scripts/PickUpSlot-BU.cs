@@ -12,7 +12,7 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
     private ItemType itemType = new ItemType();
 
     private Sprite itemSprite;
-
+    
     private bool slotInUse;
 
     [SerializeField]
@@ -108,7 +108,7 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.originalSlot = sourceSlot;
-
+        
         slotImage.sprite = this.itemSprite;
         slotInUse = true;
         selectedShader.SetActive(true);
