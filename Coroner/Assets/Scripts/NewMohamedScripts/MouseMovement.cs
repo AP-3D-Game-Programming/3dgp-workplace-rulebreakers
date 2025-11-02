@@ -6,16 +6,26 @@ public class MouseMovement : MonoBehaviour
 
     float xRotation = 0f;
     float yRotation = 0f;
+    bool locked;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //Locking the cursor to the middle of the screen and making it invisible
         Cursor.lockState = CursorLockMode.Locked;
+        locked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            locked = !locked;
+            Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+
+        }
+
+        if (!locked) return;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
