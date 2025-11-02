@@ -6,7 +6,8 @@ public class MouseMovement : MonoBehaviour
 
     float xRotation = 0f;
     float yRotation = 0f;
-    bool locked;
+    public bool locked;
+    // public static MouseMovement Instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,4 +42,18 @@ public class MouseMovement : MonoBehaviour
         //applying both rotations
         transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
     }
+    //void Awake()
+    //{
+    //    // 2. Wijs de variabele in de code toe:
+    //    if (Instance == null)
+    //    {
+    //        Instance = this; // 'this' verwijst naar de huidige instantie van dit script
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
+
 }
