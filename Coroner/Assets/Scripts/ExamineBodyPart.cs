@@ -10,6 +10,10 @@ public class ExamineBodyPart : MonoBehaviour
     public GameObject successPrefab;
     public GameObject failPrefab;
 
+   // M => toegevoegd door Mohamed(doe niet weg!)
+   //  public BodyExaminationManager manager;
+
+
     void Start()
     {
         inventory = InventoryManagerNew.Instance;
@@ -22,7 +26,12 @@ public class ExamineBodyPart : MonoBehaviour
         if (string.IsNullOrEmpty(currentToolName))
         {
             Debug.LogWarning("Geen tool geselecteerd!");
+
+            // M
+            //if (manager != null)
+            //    manager.PartExamined();
             return;
+
         }
 
         Debug.Log($"[ExamineBodyPart] Current tool: {currentToolName}, required: {requiredToolTag}");
@@ -37,10 +46,12 @@ public class ExamineBodyPart : MonoBehaviour
                 Debug.Log("Sparkle prefab instantiated!");
 
             inventory.ConsumeCurrentTool();
+
+
         }
         else
         {
-            Debug.LogError($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
+            Debug.Log($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
 
             if (failPrefab != null)
                 Instantiate(failPrefab, transform.position, Quaternion.identity);
