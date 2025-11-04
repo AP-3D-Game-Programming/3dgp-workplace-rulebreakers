@@ -40,14 +40,11 @@ public class InventoryManagerNew : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             Debug.Log("Inventory button pressed");
-            // M
-            msMovement.locked = !msMovement.locked;
-            Cursor.lockState = msMovement.locked ? CursorLockMode.Locked : CursorLockMode.None;
-            //
 
             menuActivated = !menuActivated;
             InventoryMenu.SetActive(menuActivated);
             Time.timeScale = menuActivated ? 0 : 1;
+
 
             if (menuActivated)
             {
@@ -55,6 +52,9 @@ public class InventoryManagerNew : MonoBehaviour
                 {
                     toolDisplayManager.ShowTool(pickUpSlot.GetToolPrefab());
                 }
+
+                // M
+                if (msMovement != null) msMovement.SetLocked(false);
             }
             else
             {
@@ -69,7 +69,13 @@ public class InventoryManagerNew : MonoBehaviour
                 {
                     Debug.Log("[InventoryManagerNew] Geen item in gebruik bij sluiten inventory");
                 }
+                // M
+                if (msMovement != null) msMovement.SetLocked(true);
             }
+            //// M
+            //msMovement.locked = !msMovement.locked;
+            //Cursor.lockState = msMovement.locked ? CursorLockMode.Locked : CursorLockMode.None;
+            ////
         }
     }
 

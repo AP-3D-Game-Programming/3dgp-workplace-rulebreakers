@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+
         // Dit werkt niet goed: bij omhoog/omlaag kijken gaat de speler ook omhoog/omlaag bewegen
         //Vector3 move = transform.right * x + transform.forward * z;
 
