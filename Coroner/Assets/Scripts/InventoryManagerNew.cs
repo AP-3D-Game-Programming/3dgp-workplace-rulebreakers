@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using UnityEngine;
 
 public class InventoryManagerNew : MonoBehaviour
@@ -8,6 +9,9 @@ public class InventoryManagerNew : MonoBehaviour
     public ItemSlot[] itemSlot;
     public HintSlot[] hintSlot;
     public ScriptObjItem[] scriptObjItems;
+
+    // M => door Mohamed toegevoegd
+    public MouseMovement msMovement;
 
     [SerializeField]
     private ToolDisplayManager toolDisplayManager;
@@ -36,6 +40,11 @@ public class InventoryManagerNew : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             Debug.Log("Inventory button pressed");
+            // M
+            msMovement.locked = !msMovement.locked;
+            Cursor.lockState = msMovement.locked ? CursorLockMode.Locked : CursorLockMode.None;
+            //
+
             menuActivated = !menuActivated;
             InventoryMenu.SetActive(menuActivated);
             Time.timeScale = menuActivated ? 0 : 1;

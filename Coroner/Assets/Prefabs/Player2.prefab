@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 5.547, z: -1.586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3591134949993857042}
   m_Father: {fileID: 6708704104926090443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3249038595978703797
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseMovement
   mouseSensitivity: 300
+  locked: 0
 --- !u!143 &7939420828072335727
 CharacterController:
   m_ObjectHideFlags: 0
@@ -325,6 +327,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &8370320468536307741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3591134949993857042}
+  - component: {fileID: 7212665427449283899}
+  m_Layer: 0
+  m_Name: HeldToolAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3591134949993857042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370320468536307741}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0055212243, y: 0.005709764, z: 0.00003152588, w: 0.99996847}
+  m_LocalPosition: {x: 2.16, y: -1.32, z: 2.98}
+  m_LocalScale: {x: 1, y: 1.3016357, z: 1.0000283}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7289853232190463837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7212665427449283899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370320468536307741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca49897eb7303441bbd5a5f401a9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolDisplayManager
+  toolAnchor: {fileID: 3591134949993857042}
 --- !u!1001 &6284921603755054734
 PrefabInstance:
   m_ObjectHideFlags: 0
