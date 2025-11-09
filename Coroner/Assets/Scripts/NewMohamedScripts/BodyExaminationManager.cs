@@ -25,8 +25,7 @@ public class BodyExaminationManager : MonoBehaviour
 
         if (examinedParts >= totalParts)
         {
-            mouseMovement.locked = !mouseMovement.locked;
-            Cursor.lockState = mouseMovement.locked ? CursorLockMode.Locked : CursorLockMode.None;
+            if (mouseMovement != null) mouseMovement.SetLocked(false);
             text.text = "All body parts examined! Well done!";
             text.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);

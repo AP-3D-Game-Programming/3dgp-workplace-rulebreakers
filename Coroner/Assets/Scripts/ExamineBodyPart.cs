@@ -1,7 +1,11 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExamineBodyPart : MonoBehaviour
 {
+    public TextMeshProUGUI uiLogText;
 
     private InventoryManagerNew inventory;
 
@@ -12,7 +16,7 @@ public class ExamineBodyPart : MonoBehaviour
     public GameObject failPrefab;
 
    // M => toegevoegd door Mohamed(doe niet weg!)
-   //  public BodyExaminationManager manager;
+   public BodyExaminationManager manager;
 
 
     void Start()
@@ -22,38 +26,69 @@ public class ExamineBodyPart : MonoBehaviour
 
     private void OnMouseDown()
     {
-        string currentToolName = inventory.GetCurrentToolName();
-
-        if (string.IsNullOrEmpty(currentToolName))
+        if (inventory == null)
         {
-            Debug.LogWarning("Geen tool geselecteerd! Lichaamsdeel: " + gameObject.tag);
-
-            // M
-            //if (manager != null)
-            //    manager.PartExamined();
+            Debug.LogWarning("[ExamineBodyPart] Inventory is null!");
             return;
-
         }
 
-        Debug.Log($"[ExamineBodyPart] Current tool: {currentToolName}, required: {requiredToolTag}");
+        string currentToolName = inventory.GetCurrentToolName();
+        string message = "";
 
+        // Eerste check: geen tool geselecteerd -> toon message en stop
+        if (string.IsNullOrEmpty(currentToolName))
+        {
+            message = "Geen tool geselecteerd! Lichaamsdeel: " + gameObject.tag;
+            Debug.Log(message);
+
+            if (uiLogText != null)
+            {
+                uiLogText.gameObject.SetActive(true);
+                uiLogText.text = message;
+                StartCoroutine(WaitAndSetTextInActive());
+            }
+
+            return; // <- heel belangrijk: voorkom overschrijven van message
+        }
+
+        // Vanaf hier weet je dat er wél een tool geselecteerd is
         if (currentToolName == requiredToolTag)
         {
-            Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tool '{currentToolName}'.");
+            message = "CORRECT! " + gameObject.name + " onderzocht met " + currentToolName;
+            Debug.Log(message);
 
             if (successPrefab != null)
                 Instantiate(successPrefab, transform.position, Quaternion.identity);
 
             inventory.ConsumeCurrentTool();
-        }
 
+            if (manager != null)
+                manager.PartExamined();
+        }
         else
         {
-            Debug.Log($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
+            message = "WRONG TOOL! Vereist: " + requiredToolTag + " Gebruikt: " + currentToolName;
+            Debug.Log(message);
 
             if (failPrefab != null)
                 Instantiate(failPrefab, transform.position, Quaternion.identity);
         }
 
+        // Toon message in UI
+        if (uiLogText != null)
+        {
+            uiLogText.gameObject.SetActive(true);
+            uiLogText.text = message;
+            StartCoroutine(WaitAndSetTextInActive());
+        }
     }
+
+
+    private IEnumerator WaitAndSetTextInActive()
+    {
+        yield return new WaitForSeconds(3f);
+        if (uiLogText != null)
+            uiLogText.gameObject.SetActive(false);
+    }
+
 }
