@@ -15,6 +15,13 @@ TagManager:
   - Nier
   - Darmen
   - Voet
+  - ExamineFace
+  - ExamineLimbs
+  - ExamineTorso
+  - ExamineBrain
+  - Benen
+  - Borst
+  - Hoofd
   layers:
   - Default
   - TransparentFX

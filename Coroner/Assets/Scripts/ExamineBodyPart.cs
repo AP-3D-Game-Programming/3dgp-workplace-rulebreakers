@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ExamineBodyPart : MonoBehaviour
 {
+
     private InventoryManagerNew inventory;
 
     [Tooltip("Tag van het juiste instrument (bijv. 'Pincet' of 'Scalpel')")]
@@ -25,7 +26,7 @@ public class ExamineBodyPart : MonoBehaviour
 
         if (string.IsNullOrEmpty(currentToolName))
         {
-            Debug.LogWarning("Geen tool geselecteerd!");
+            Debug.LogWarning("Geen tool geselecteerd! Lichaamsdeel: " + gameObject.tag);
 
             // M
             //if (manager != null)
@@ -36,19 +37,16 @@ public class ExamineBodyPart : MonoBehaviour
 
         Debug.Log($"[ExamineBodyPart] Current tool: {currentToolName}, required: {requiredToolTag}");
 
-
         if (currentToolName == requiredToolTag)
         {
             Debug.Log($"CORRECT! {gameObject.name} was clicked with matching tool '{currentToolName}'.");
 
             if (successPrefab != null)
                 Instantiate(successPrefab, transform.position, Quaternion.identity);
-                Debug.Log("Sparkle prefab instantiated!");
 
             inventory.ConsumeCurrentTool();
-
-
         }
+
         else
         {
             Debug.Log($"Wrong tool! Needed '{requiredToolTag}', but used '{currentToolName}'.");
