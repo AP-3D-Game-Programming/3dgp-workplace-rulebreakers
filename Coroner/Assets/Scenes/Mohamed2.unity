@@ -35579,6 +35579,7 @@ GameObject:
   - component: {fileID: 574714709}
   - component: {fileID: 574714708}
   - component: {fileID: 574714707}
+  - component: {fileID: 574714710}
   m_Layer: 0
   m_Name: PosterFace
   m_TagString: ExamineFace
@@ -35702,6 +35703,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &574714710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574714705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
 --- !u!4 &576483824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4203574661673506, guid: c765cbba0bf7c4a448a11a55ff6fa9e1, type: 3}
@@ -70494,6 +70509,7 @@ GameObject:
   - component: {fileID: 1180354198}
   - component: {fileID: 1180354197}
   - component: {fileID: 1180354196}
+  - component: {fileID: 1180354199}
   m_Layer: 0
   m_Name: PosterBrain
   m_TagString: ExamineBrain
@@ -70617,6 +70633,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1180354199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180354194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
 --- !u!1 &1180731524
 GameObject:
   m_ObjectHideFlags: 0
@@ -76744,6 +76774,7 @@ GameObject:
   - component: {fileID: 1300078235}
   - component: {fileID: 1300078234}
   - component: {fileID: 1300078233}
+  - component: {fileID: 1300078236}
   m_Layer: 0
   m_Name: PosterTorso
   m_TagString: ExamineTorso
@@ -76867,6 +76898,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1300078236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300078231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
 --- !u!4 &1302487675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4130698104326888, guid: 41f7be0ed82ddf0418b9b0d40da85fca, type: 3}
@@ -115798,6 +115843,7 @@ GameObject:
   - component: {fileID: 1958129549}
   - component: {fileID: 1958129548}
   - component: {fileID: 1958129547}
+  - component: {fileID: 1958129550}
   m_Layer: 0
   m_Name: PosterLimbs
   m_TagString: ExamineLimbs
@@ -115921,6 +115967,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1958129550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958129545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
 --- !u!1001 &1960107461
 PrefabInstance:
   m_ObjectHideFlags: 0

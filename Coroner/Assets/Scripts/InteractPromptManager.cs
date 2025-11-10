@@ -14,6 +14,10 @@ public class InteractPromptManager : MonoBehaviour
 
     void Update()
     {
+        if (!transform.parent.GetChild(0).gameObject.activeSelf)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void LateUpdate()

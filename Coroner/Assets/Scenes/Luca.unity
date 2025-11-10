@@ -3631,6 +3631,7 @@ GameObject:
   - component: {fileID: 599745694}
   - component: {fileID: 599745693}
   - component: {fileID: 599745692}
+  - component: {fileID: 599745695}
   m_Layer: 0
   m_Name: PosterFace
   m_TagString: ExamineFace
@@ -3754,6 +3755,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &599745695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599745690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1 &599850948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6433592274857225304, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
@@ -3786,6 +3802,7 @@ GameObject:
   - component: {fileID: 602839536}
   - component: {fileID: 602839535}
   - component: {fileID: 602839534}
+  - component: {fileID: 602839537}
   m_Layer: 0
   m_Name: PosterTorso
   m_TagString: ExamineTorso
@@ -3909,6 +3926,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &602839537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602839532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &614749145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8093904995948005384, guid: 02ad78cca7f19f843b49a2e580791919, type: 3}
@@ -4141,6 +4173,7 @@ GameObject:
   - component: {fileID: 718357993}
   - component: {fileID: 718357992}
   - component: {fileID: 718357991}
+  - component: {fileID: 718357994}
   m_Layer: 0
   m_Name: PosterLimbs
   m_TagString: ExamineLimbs
@@ -4264,6 +4297,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &718357994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718357989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &740748388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7734416235201535954, guid: 02ad78cca7f19f843b49a2e580791919, type: 3}
@@ -4302,6 +4350,7 @@ GameObject:
   - component: {fileID: 748879779}
   - component: {fileID: 748879778}
   - component: {fileID: 748879777}
+  - component: {fileID: 748879780}
   m_Layer: 0
   m_Name: PosterBrain
   m_TagString: ExamineBrain
@@ -4425,6 +4474,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &748879780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748879775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &769671572
 GameObject:
   m_ObjectHideFlags: 0

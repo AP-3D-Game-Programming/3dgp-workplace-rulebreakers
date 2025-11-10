@@ -3,8 +3,11 @@ using UnityEngine;
 public class ShowInteractPrompt : MonoBehaviour
 {
     private GameObject parent;
+    private GameObject instantiatedIcon;
+
     public GameObject interactPromptIconPrefab;
     public Sprite icon;
+    public Positioning positioning;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,7 +19,23 @@ public class ShowInteractPrompt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 origin = Camera.main.transform.position;
+        Vector3 dir = Camera.main.transform.forward;
+
+        float maxDistance = 100f;
+        float sphereRadius = 0.3f;
+
+        if (Physics.SphereCast(origin, sphereRadius, dir, out RaycastHit hit, maxDistance))
+        {
+            if (hit.collider == GetComponent<Collider>() && instantiatedIcon is not null)
+            {
+                instantiatedIcon.SetActive(true);
+            }
+            else
+            {
+                instantiatedIcon.SetActive(false);
+            }
+        }
     }
 
     private void CreateParentObjectAndPutCurrentObjectIn()
@@ -26,29 +45,47 @@ public class ShowInteractPrompt : MonoBehaviour
 
         // Store the current position and rotation of the child
         Vector3 childPosition = transform.position;
-        //Quaternion childRotation = transform.rotation;
 
         // Set the parent of the current object
         transform.SetParent(parent.transform, true);
 
         // Set the parent's position and rotation to the child's original
         parent.transform.position = childPosition;
-        //parent.transform.rotation = childRotation;
 
         // Reset the child's local position and rotation
         transform.localPosition = Vector3.zero;
-        //transform.localRotation = Quaternion.identity;
     }
 
     private void addIconPrefabToParentGroup()
     {
         if (interactPromptIconPrefab is not null)
         {
-            GameObject instantiatedIcon = Instantiate(interactPromptIconPrefab);
+            Vector3 position;
+
+            switch (positioning)
+            {
+                case Positioning.Up:
+                    position = Vector3.up;
+                    break;
+                case Positioning.Front:
+                    position = Vector3.back;
+                    break;
+                default:
+                    position = Vector3.up;
+                    break;
+            }
+
+            instantiatedIcon = Instantiate(interactPromptIconPrefab);
 
             instantiatedIcon.transform.SetParent(parent.transform, true);
-            instantiatedIcon.transform.localPosition = Vector3.up;
-            //instantiatedIcon.transform.localRotation = Quaternion.identity;
+            instantiatedIcon.transform.localPosition = position;
+            instantiatedIcon.SetActive(false);
         }
     }
+}
+
+public enum Positioning
+{
+    Up,
+    Front
 }
