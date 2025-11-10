@@ -107,14 +107,24 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             pickUpSlot.PickUpTool(itemName, inventoryIcon, itemDescription, this);
         }
-        EmptySlot();
     }
 
-    private void EmptySlot()
+    public void EmptySlot()
     {
-        itemImage.sprite = emptySprite;
+        itemName = "";
+        inventoryIcon = null;
+        itemDescription = "";
+
+        if (itemImage != null)
+            itemImage.sprite = emptySprite;
+
         isFull = false;
+        thisItemSelected = false;
+
+        if (selectedShader != null)
+            selectedShader.SetActive(false);
     }
+
 
     public void OnRightClick()
     {

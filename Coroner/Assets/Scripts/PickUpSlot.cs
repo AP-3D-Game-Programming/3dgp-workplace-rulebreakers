@@ -101,6 +101,7 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
     {
         if (slotInUse && originalSlot != null)
         {
+            originalSlot.EmptySlot();
             originalSlot.AddItem(this.itemName, this.itemSprite, this.itemDescription, itemType);
         }
 
@@ -113,6 +114,8 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
         slotInUse = true;
         selectedShader.SetActive(true);
         thisItemSelected = true;
+
+        sourceSlot.EmptySlot();
 
         Debug.Log($"[PickUpSlot] Picked up tool: {itemName}");
     }
@@ -136,6 +139,8 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
 
     public void ConsumeTool()
     {
+        ItemSlot prevOriginal = originalSlot;
+        
         itemName = "";
         itemDescription = "";
         itemSprite = emptySprite;
@@ -146,6 +151,13 @@ public class PickUpSlot : MonoBehaviour, IPointerClickHandler
         originalSlot = null;
 
         toolDisplayManager.HideTool();
+
+        if (prevOriginal != null)
+        {
+            prevOriginal.EmptySlot(); 
+        }
+
+        originalSlot = null;
     }
 
     public string GetItemName()
