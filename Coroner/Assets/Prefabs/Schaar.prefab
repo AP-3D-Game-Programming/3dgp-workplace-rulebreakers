@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 5229980490169669086}
   - component: {fileID: 6795598583710636647}
   - component: {fileID: 3367845262574955200}
+  - component: {fileID: 4543254826808818036}
   m_Layer: 0
   m_Name: Schaar
   m_TagString: ExamineTorso
@@ -226,6 +227,20 @@ MonoBehaviour:
     the scissors
   isClickable: 0
   itemType: 1
+--- !u!114 &4543254826808818036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776703209392662428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
 --- !u!1 &7257442751570320298
 GameObject:
   m_ObjectHideFlags: 0

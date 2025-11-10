@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class InteractPromptManager : MonoBehaviour
 {
-    //public Sprite icon;
+    public Sprite icon;
     private Transform cam;
-    //public ShowInteractPrompt interactPrompt;
 
     void Start()
     {
-        //icon = interactPrompt.icon;
-        //gameObject.GetComponent<SpriteRenderer>().sprite = icon;
+        icon = transform.parent.GetComponentInChildren<ShowInteractPrompt>().icon;
+        gameObject.GetComponent<SpriteRenderer>().sprite = icon;
         cam = Camera.main.transform;
     }
 
