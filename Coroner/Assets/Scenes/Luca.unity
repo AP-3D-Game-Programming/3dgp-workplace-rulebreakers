@@ -9775,6 +9775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
   objectivesText: {fileID: 1406359014}
+  objectivesPanel: {fileID: 1859748856}
 --- !u!114 &1859748859
 MonoBehaviour:
   m_ObjectHideFlags: 0
