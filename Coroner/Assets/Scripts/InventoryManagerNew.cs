@@ -45,6 +45,10 @@ public class InventoryManagerNew : MonoBehaviour
             InventoryMenu.SetActive(menuActivated);
             Time.timeScale = menuActivated ? 0 : 1;
 
+            // Show/hide objectives
+            var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
+            if (objectivesManager != null)
+                objectivesManager.SetObjectivesVisible(!menuActivated);
 
             if (menuActivated)
             {

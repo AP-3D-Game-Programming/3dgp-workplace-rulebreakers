@@ -6,7 +6,15 @@ using Coroner;
 public class ObjectivesManager : MonoBehaviour
 {
     public TMP_Text objectivesText;
+    public GameObject objectivesPanel;
     public Objective[] objectives;
+    public void SetObjectivesVisible(bool visible)
+    {
+        if (objectivesPanel != null)
+            objectivesPanel.SetActive(visible);
+        if (objectivesText != null)
+            objectivesText.gameObject.SetActive(visible);
+    }
 
     void Start()
     {
