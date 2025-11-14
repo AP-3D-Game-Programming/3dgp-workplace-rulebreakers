@@ -51,7 +51,7 @@ public class ExamineBodyPart : MonoBehaviour
             return; // <- heel belangrijk: voorkom overschrijven van message
         }
 
-        // Vanaf hier weet je dat er wél een tool geselecteerd is
+        // Vanaf hier weet je dat er wÃ©l een tool geselecteerd is
         if (currentToolName == requiredToolTag)
         {
             message = "CORRECT! " + gameObject.name + " onderzocht met " + currentToolName;
@@ -64,6 +64,13 @@ public class ExamineBodyPart : MonoBehaviour
 
             if (manager != null)
                 manager.PartExamined();
+
+            // Trigger body inspection objective completion
+            var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
+            if (objectivesManager != null)
+            {
+                objectivesManager.CompleteObjective("Inspect the " + gameObject.name.ToLower());
+            }
         }
         else
         {

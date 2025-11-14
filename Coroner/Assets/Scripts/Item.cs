@@ -94,9 +94,15 @@ public class Item : MonoBehaviour
         ShowPickupMessage(itemName + " toegevoegd aan de inventaris!");
         PlayPickupSound();
         InventoryManagerNew.Instance.AddItem(itemName, inventoryIcon, itemDescription, itemType);
+
+        var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
+        if (objectivesManager != null && itemType == ItemType.tool)
+        {
+            objectivesManager.CompleteObjective("Collect the " + itemName);
+        }
+
         gameObject.SetActive(false);
     }
-    // ---------------------- //
 
     void PlayPickupSound()
     {
