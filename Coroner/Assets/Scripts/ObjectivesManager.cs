@@ -48,6 +48,19 @@ public class ObjectivesManager : MonoBehaviour
                     if (sub.description.ToLower() == descLower)
                     {
                         sub.completed = true;
+                        bool allDone = true;
+                        foreach (var s in obj.subObjectives)
+                        {
+                            if (!s.completed)
+                            {
+                                allDone = false;
+                                break;
+                            }
+                        }
+                        if (allDone)
+                        {
+                            obj.completed = true;
+                        }
                         UpdateObjectivesUI();
                         return;
                     }
