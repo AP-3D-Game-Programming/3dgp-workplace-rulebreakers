@@ -23,4 +23,12 @@ public class ToolDisplayManager : MonoBehaviour
             currentTool = null;
         }
     }
+        private void Update()
+        {
+            if (currentTool != null && toolAnchor != null)
+            {
+                currentTool.transform.position = toolAnchor.position;
+                currentTool.transform.rotation = toolAnchor.rotation;
+            }
+        }
 }

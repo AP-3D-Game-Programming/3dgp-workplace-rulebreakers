@@ -30,9 +30,9 @@ public class ObjectivesManager : MonoBehaviour
             new Objective("Inspect the body", false, new Objective[]
             {
                 new Objective("Inspect the brain"),
-                new Objective("Inspect the face"),
-                new Objective("Inspect the limbs"),
-                new Objective("Inspect the torso")
+                new Objective("Inspect the eyes"),
+                new Objective("Inspect the hand"),
+                new Objective("Inspect the darmen")
             })
         };
         UpdateObjectivesUI();

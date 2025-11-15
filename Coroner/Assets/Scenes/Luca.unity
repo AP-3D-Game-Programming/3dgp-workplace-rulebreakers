@@ -1946,11 +1946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6708704104926090443, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.1
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6708704104926090443, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.1
+      value: -13.68
       objectReference: {fileID: 0}
     - target: {fileID: 6708704104926090443, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1998,6 +1998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4583647863701968700, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
+    - {fileID: 7212665427449283899, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5049,6 +5050,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6843323788198661845, guid: 3b8158eb8a8110847a35ab4e11f4e7ce, type: 3}
   m_PrefabInstance: {fileID: 875862524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &893023261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893023263}
+  - component: {fileID: 893023262}
+  m_Layer: 0
+  m_Name: ToolDisplayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &893023262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893023261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca49897eb7303441bbd5a5f401a9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolDisplayManager
+  toolAnchor: {fileID: 1716114603}
+--- !u!4 &893023263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893023261}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &896475241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5435,7 +5481,7 @@ MonoBehaviour:
   selectedShader: {fileID: 307972252}
   thisItemSelected: 0
   emptySprite: {fileID: 21300000, guid: ca9939d1a597af343807b262753aec96, type: 3}
-  toolDisplayManager: {fileID: 1079881631}
+  toolDisplayManager: {fileID: 0}
   inventoryManager: {fileID: 1295289496}
 --- !u!114 &935958699
 MonoBehaviour:
@@ -5917,17 +5963,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.9870405, y: 3.1173751, z: 0.37029245}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1079881631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212665427449283899, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
-  m_PrefabInstance: {fileID: 292281457}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca49897eb7303441bbd5a5f401a9e68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToolDisplayManager
 --- !u!1001 &1079886162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6928,7 +6963,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 73b3ce9a5a814a94b89b309225e87675, type: 2}
   - {fileID: 11400000, guid: 1c9ce50918074224f810785945703887, type: 2}
   msMovement: {fileID: 599850949}
-  toolDisplayManager: {fileID: 1079881631}
+  toolDisplayManager: {fileID: 893023262}
   pickUpSlot: {fileID: 935958698}
   toolDatabase: {fileID: 338024534}
 --- !u!114 &1295289497
@@ -9442,6 +9477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4efbb65b8e544e40ad5f50423b2919b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintSlot
+--- !u!4 &1716114603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3591134949993857042, guid: fcc2243108af4154a97e6f9c7ec2a338, type: 3}
+  m_PrefabInstance: {fileID: 292281457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1716341308
 GameObject:
   m_ObjectHideFlags: 0
@@ -10906,3 +10946,4 @@ SceneRoots:
   - {fileID: 338024535}
   - {fileID: 1387999219}
   - {fileID: 1242353471}
+  - {fileID: 893023263}
