@@ -6610,6 +6610,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206163525}
   m_CullTransparentMesh: 1
+--- !u!1 &1242353469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242353471}
+  - component: {fileID: 1242353470}
+  m_Layer: 0
+  m_Name: ObjectivesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1242353470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242353469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa33e285ef3a89478cd2d9d3c02de83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
+  objectivesText: {fileID: 1406359014}
+  objectivesPanel: {fileID: 1859748856}
+--- !u!4 &1242353471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242353469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1268277237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9706,7 +9752,6 @@ GameObject:
   - component: {fileID: 1859748857}
   - component: {fileID: 1859748860}
   - component: {fileID: 1859748859}
-  - component: {fileID: 1859748858}
   m_Layer: 5
   m_Name: ObjectivesPanel
   m_TagString: Untagged
@@ -9734,20 +9779,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 10}
   m_SizeDelta: {x: 500, y: 450}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1859748858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859748856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa33e285ef3a89478cd2d9d3c02de83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
-  objectivesText: {fileID: 1406359014}
-  objectivesPanel: {fileID: 1859748856}
 --- !u!114 &1859748859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10874,3 +10905,4 @@ SceneRoots:
   - {fileID: 1136163576}
   - {fileID: 338024535}
   - {fileID: 1387999219}
+  - {fileID: 1242353471}
