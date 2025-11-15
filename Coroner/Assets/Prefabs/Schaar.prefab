@@ -156,7 +156,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3776703209392662428}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4608784988962955085, guid: 9f283bc08bab2bd43b483353ab9fda9c, type: 3}
 --- !u!23 &6795598583710636647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51deb85d04978f34b9bcbd12c73c818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemName: a pair of scissors
+  itemName: scissors
   inventoryIcon: {fileID: 21300000, guid: 49fbf70d34bcd1a4993744a111c30f8f, type: 3}
   pickupText: {fileID: 0}
   messageDuration: 2
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
   interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
   icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1 &7257442751570320298
 GameObject:
   m_ObjectHideFlags: 0

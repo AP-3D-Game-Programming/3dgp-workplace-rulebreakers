@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51deb85d04978f34b9bcbd12c73c818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemName: a scalpel
+  itemName: scalpel
   inventoryIcon: {fileID: 21300000, guid: f52b7f236832a594aa455a54e9bd24f8, type: 3}
   pickupText: {fileID: 0}
   messageDuration: 2
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
   interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
   icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
