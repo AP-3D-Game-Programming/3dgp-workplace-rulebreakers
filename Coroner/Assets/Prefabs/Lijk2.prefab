@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
   uiLogText: {fileID: 0}
-  requiredToolTag: a pair of scissors
+  requiredToolTag: scissors
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
   manager: {fileID: 0}
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
   uiLogText: {fileID: 0}
-  requiredToolTag: a scalpel
+  requiredToolTag: scalpel
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
   manager: {fileID: 0}
@@ -370,15 +370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 539.35
+      value: -7.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.54
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 450.99
+      value: 2.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalRotation.w
