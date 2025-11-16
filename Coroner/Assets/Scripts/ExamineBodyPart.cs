@@ -1,13 +1,13 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ExamineBodyPart : MonoBehaviour
 {
     public TextMeshProUGUI uiLogText;
 
     private InventoryManagerNew inventory;
+    private BoxCollider collider;
 
     [Tooltip("Tag van het juiste instrument (bijv. 'Pincet' of 'Scalpel')")]
     public string requiredToolTag;
@@ -22,9 +22,29 @@ public class ExamineBodyPart : MonoBehaviour
     void Start()
     {
         inventory = InventoryManagerNew.Instance;
+        collider = gameObject.GetComponent<BoxCollider>();
+
+        // Synchronize boundaries gameObject with its BoxCollider
+        transform.SetPositionAndRotation(collider.transform.position, collider.transform.rotation);
     }
 
-    private void OnMouseDown()
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Camera cam = Camera.main;
+            if (cam == null) return;
+
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            if (collider.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
+            {
+                if (hit.collider != null && hit.collider.gameObject.GetInstanceID() == gameObject.GetInstanceID())
+                    HandleClick();
+            }
+        }
+    }
+
+    private void HandleClick()
     {
         if (inventory == null)
         {
@@ -68,9 +88,7 @@ public class ExamineBodyPart : MonoBehaviour
             // Trigger body inspection objective completion
             var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
             if (objectivesManager != null)
-            {
                 objectivesManager.CompleteObjective("Inspect the " + gameObject.name.ToLower());
-            }
         }
         else
         {
@@ -90,12 +108,10 @@ public class ExamineBodyPart : MonoBehaviour
         }
     }
 
-
     private IEnumerator WaitAndSetTextInActive()
     {
         yield return new WaitForSeconds(3f);
         if (uiLogText != null)
             uiLogText.gameObject.SetActive(false);
     }
-
 }

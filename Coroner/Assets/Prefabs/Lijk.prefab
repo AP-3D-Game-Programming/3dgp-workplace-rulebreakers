@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 731773665048232561}
   - component: {fileID: 200665266677105533}
   - component: {fileID: 2067222764804335911}
+  - component: {fileID: 4787724387021496856}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Hand
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7696533, y: 0.1169499, z: 0.0031751432}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3839, y: 1.4394, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -66,8 +67,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: forceps
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &4787724387021496856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103124660051837322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &566821031250814521
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5719043231255673529
 Transform:
   m_ObjectHideFlags: 0
@@ -95,8 +114,8 @@ Transform:
   m_GameObject: {fileID: 566821031250814521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0022552311, y: 0.31960434, z: 0.040366415}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.006, y: 0.332, z: 0.04}
+  m_LocalScale: {x: 0.58706, y: 0.54476565, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -134,8 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &1754315084075431889
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,8 +169,9 @@ GameObject:
   - component: {fileID: 2782561036388893001}
   - component: {fileID: 5146449794019654033}
   - component: {fileID: 1287446027294907590}
+  - component: {fileID: 6525022662477759579}
   m_Layer: 0
-  m_Name: Darmen
+  m_Name: Torso
   m_TagString: Darmen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +187,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0001887083, y: 0.06609652, z: 0.069208674}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.84437, y: 0.89957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -188,8 +211,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26214194, y: 0.23266633, z: 0.13150318}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.49859807, y: 0.60897905, z: 0.35922188}
+  m_Center: {x: 0.0060490086, y: 0.14529431, z: -0.051535808}
 --- !u!114 &1287446027294907590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +225,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: scissors
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &6525022662477759579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754315084075431889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &1853498749297373310
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4502186452300406201
 Transform:
   m_ObjectHideFlags: 0
@@ -270,8 +311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &2667268705478685098
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4776622186098525230
 Transform:
   m_ObjectHideFlags: 0
@@ -299,8 +343,8 @@ Transform:
   m_GameObject: {fileID: 2667268705478685098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08270981, y: 0.36059064, z: 0.13676012}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.083, y: 0.43, z: 0.137}
+  m_LocalScale: {x: 0.65748, y: 0.68105, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -338,8 +382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &4373559492520876276
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +398,7 @@ GameObject:
   - component: {fileID: 7903676377307704446}
   - component: {fileID: 397912202649791094}
   - component: {fileID: 3812076507939423774}
+  - component: {fileID: 5150975845909253790}
   m_Layer: 0
   m_Name: Brein
   m_TagString: Brein
@@ -367,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 4373559492520876276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000014901161, y: 0.8679788, z: 0.0053967685}
+  m_LocalPosition: {x: 0, y: 0.739, z: 0.005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,8 +440,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18893695, y: 0.09689758, z: 0.29224715}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21073143, y: 0.12090972, z: 0.24780492}
+  m_Center: {x: -0.00035152832, y: 0.106734686, z: -0.022221358}
 --- !u!114 &3812076507939423774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,8 +454,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: scalpel
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &5150975845909253790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373559492520876276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &5954320655780660064
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7342831706010232309
 Transform:
   m_ObjectHideFlags: 0
@@ -436,7 +502,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.255, y: -1.1490712, z: 0.023668349}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.191, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -474,8 +540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &6087913163783105449
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +556,7 @@ GameObject:
   - component: {fileID: 5062679913425271402}
   - component: {fileID: 7754573435482805133}
   - component: {fileID: 7211842054483544973}
+  - component: {fileID: 4892721095361927569}
   m_Layer: 0
   m_Name: Ogen
   m_TagString: Ogen
@@ -528,8 +598,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18893695, y: 0.05183958, z: 0.07017611}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21301147, y: 0.115275554, z: 0.123609774}
+  m_Center: {x: 2.1399972e-16, y: -0.031717964, z: -0.015471151}
 --- !u!114 &7211842054483544973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,8 +612,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: tweezers
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &4892721095361927569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6087913163783105449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 1
 --- !u!1 &6291733153970645263
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2409219542378970738
 Transform:
   m_ObjectHideFlags: 0
@@ -610,8 +698,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &6301521483221013773
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5290481516674346014
 Transform:
   m_ObjectHideFlags: 0
@@ -678,8 +769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &6457685526633667446
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4015679444527827130
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +802,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.24990147, y: -1.1490712, z: 0.023668349}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2973, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5416810192993156584}
@@ -746,8 +840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &7687753308436439409
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &834258451113944352
 Transform:
   m_ObjectHideFlags: 0
@@ -814,8 +911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &8576068334572710924
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5223747437221772631
 Transform:
   m_ObjectHideFlags: 0
@@ -882,8 +982,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &8740537936366008282
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +1004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7791242332654749229
 Transform:
   m_ObjectHideFlags: 0
@@ -950,8 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
-  successPrefab: {fileID: 104649827887586557, guid: 9e879e8eb2343bb43b8fd7e565bf3a6f, type: 3}
-  failPrefab: {fileID: 8988968562024924730, guid: cf2028cdcf629c04682deed6283bfa6e, type: 3}
+  uiLogText: {fileID: 0}
+  requiredToolTag: 
+  successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
+  failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
 --- !u!1001 &5523340959488612867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,15 +1068,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -978,27 +1092,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.70705974
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.008158689
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.70705974
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0.008158686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -1.322
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1006,7 +1120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bb3824133adb9b545bb57d3c5a05d1ee, type: 3}
       propertyPath: m_Name
