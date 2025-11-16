@@ -31,8 +31,10 @@ public class BodyExaminationManager : MonoBehaviour
             if (mouseMovement != null) mouseMovement.SetLocked(false);
             text.text = "All body parts examined! Well done!";
             text.gameObject.SetActive(true);
-            // restartButton.gameObject.SetActive(true);
-            nextButton.gameObject.SetActive(true);
+                nextButton.gameObject.SetActive(true);
+            //else if(level == 2)
+            //    restartButton.gameObject.SetActive(true);
+
         }
     }
 }
