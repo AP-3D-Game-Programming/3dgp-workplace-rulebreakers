@@ -22,17 +22,17 @@ public class ObjectivesManager : MonoBehaviour
         {
             new Objective("Collect the tools", false, new Objective[]
             {
-                new Objective("Collect the scalpel"),
-                new Objective("Collect the scissors"),
-                new Objective("Collect the tweezers"),
-                new Objective("Collect the forceps")
+                new Objective("Verzamel het scalpel"),
+                new Objective("Verzamel de scissors"),
+                new Objective("Verzamel de tweezers"),
+                new Objective("Verzamel de forceps")
             }),
             new Objective("Inspect the body", false, new Objective[]
             {
-                new Objective("Inspect the brain"),
-                new Objective("Inspect the eyes"),
-                new Objective("Inspect the hand"),
-                new Objective("Inspect the darmen")
+                new Objective("Inspecteer het hoofd"),
+                new Objective("Inspecteer het hand"),
+                new Objective("Inspecteer de borst"),
+                new Objective("Inspecteer de benen")
             })
         };
         UpdateObjectivesUI();

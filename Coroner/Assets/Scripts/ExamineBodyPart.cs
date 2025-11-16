@@ -82,13 +82,18 @@ public class ExamineBodyPart : MonoBehaviour
 
             inventory.ConsumeCurrentTool();
 
+                var toolDisplayManager = FindFirstObjectByType<ToolDisplayManager>();
+                if (toolDisplayManager != null)
+                    toolDisplayManager.HideTool();
+
             if (manager != null)
                 manager.PartExamined();
 
             // Trigger body inspection objective completion
             var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
             if (objectivesManager != null)
-                objectivesManager.CompleteObjective("Inspect the " + gameObject.name.ToLower());
+                objectivesManager.CompleteObjective("Inspecteer de " + gameObject.name.ToLower());
+                objectivesManager.CompleteObjective("Inspecteer het " + gameObject.name.ToLower());
         }
         else
         {

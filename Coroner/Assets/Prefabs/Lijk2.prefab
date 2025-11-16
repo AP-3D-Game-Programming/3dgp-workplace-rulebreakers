@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3634402383415574126}
   - component: {fileID: 6197153803153255036}
   - component: {fileID: 155088772394209358}
+  - component: {fileID: 5339453709589043513}
   m_Layer: 0
   m_Name: Borst
   m_TagString: Borst
@@ -66,9 +67,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
+  uiLogText: {fileID: 0}
   requiredToolTag: forceps
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &5339453709589043513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579133386855728838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1 &5742007398082174794
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +98,7 @@ GameObject:
   - component: {fileID: 5622740872490858672}
   - component: {fileID: 4779715753194176808}
   - component: {fileID: 4423689402156028854}
+  - component: {fileID: 8400557990291296107}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Hand
@@ -135,9 +154,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
+  uiLogText: {fileID: 0}
   requiredToolTag: a pair of scissors
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &8400557990291296107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742007398082174794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1 &6940650051650640078
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +185,7 @@ GameObject:
   - component: {fileID: 5989415688189518040}
   - component: {fileID: 4265186236165552968}
   - component: {fileID: 999266858188364906}
+  - component: {fileID: 1599138569631758156}
   m_Layer: 0
   m_Name: Benen
   m_TagString: Benen
@@ -204,9 +241,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
+  uiLogText: {fileID: 0}
   requiredToolTag: tweezers
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &1599138569631758156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940650051650640078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1 &9005872229599429083
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +272,7 @@ GameObject:
   - component: {fileID: 1798229198003867702}
   - component: {fileID: 4419405130043864420}
   - component: {fileID: 4772160495709681406}
+  - component: {fileID: 3663646630343480559}
   m_Layer: 0
   m_Name: Hoofd
   m_TagString: Hoofd
@@ -273,9 +328,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104e7246bffc8224c826af14cd0adf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExamineBodyPart
+  uiLogText: {fileID: 0}
   requiredToolTag: a scalpel
   successPrefab: {fileID: 7645665571443258312, guid: 346764d2f8c12c34e93806f66d8c0690, type: 3}
   failPrefab: {fileID: 5306933464080098159, guid: 1c5657b3eafd2184ea95b0ec04771fad, type: 3}
+  manager: {fileID: 0}
+--- !u!114 &3663646630343480559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005872229599429083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257231d10d8d7994d9c3f6bebc3ff25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowInteractPrompt
+  interactPromptIconPrefab: {fileID: 4792992638953575159, guid: 21014bd6030e3494c9643c86606b52a4, type: 3}
+  icon: {fileID: 21300000, guid: 862568ba68b3d7f4dae44d7cd7108259, type: 3}
+  positioning: 0
 --- !u!1001 &8812746614335032416
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -98,7 +98,8 @@ public class Item : MonoBehaviour
         var objectivesManager = FindFirstObjectByType<ObjectivesManager>();
         if (objectivesManager != null && itemType == ItemType.tool)
         {
-            objectivesManager.CompleteObjective("Collect the " + itemName);
+            objectivesManager.CompleteObjective("Verzamel de " + itemName);
+            objectivesManager.CompleteObjective("Verzamel het " + itemName);
         }
 
         gameObject.SetActive(false);
