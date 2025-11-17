@@ -67,7 +67,7 @@ public class InventoryManagerNew : MonoBehaviour
                 {
                     GameObject prefab = pickUpSlot.GetToolPrefab();
                     Debug.Log($"[InventoryManagerNew] Prefab bij sluiten inventory: {prefab}");
-                    toolDisplayManager.ShowTool(prefab);
+                    toolDisplayManager.ShowTool(prefab); 
                 }
                 else
                 {
@@ -82,7 +82,7 @@ public class InventoryManagerNew : MonoBehaviour
             ////
         }
     }
-
+    
     public void UseItem(string itemName)
     {
         for (int i = 0; i < scriptObjItems.Length; i++)
